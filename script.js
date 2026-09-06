@@ -5,25 +5,19 @@ const projectData = {
     title: '2D Convolution Accelerator', category: 'Hardware acceleration / SystemVerilog', status: 'In progress',
     description: 'Since August 2026, I have been designing a synthesizable SystemVerilog hardware accelerator for 2D convolution, translating the computational algorithm into register-transfer-level digital logic.',
     focus: 'Developing modular RTL components and verifying them with SystemVerilog testbenches and randomized simulation in Siemens QuestaSim. Synthesis work uses Synopsys Design Compiler targeting the Nangate 45 nm standard-cell library to evaluate the hardware implementation.',
-    context: '2D convolution applies a kernel across input data to generate an output. The illustration on this site shows the operation conceptually; it is not an implementation diagram or simulation result.'
+    context: '2D convolution applies a kernel across input data to generate an output.'
   },
   signature: {
     title: 'HP 5004A Signature Analyzer', category: 'Digital systems / VHDL', status: 'Completed May 2026 · Validated on a Xilinx FPGA',
     description: 'Designed a VHDL-based HP 5004A digital signature analyzer using a 16-bit linear-feedback shift register (LFSR) to compact serial input data into repeatable hexadecimal signatures for hardware fault analysis.',
     focus: 'Implemented modular RTL for start/stop gate-generation state machines, edge-select sampling, LFSR control, output buffering, and multiplexed 7-segment display driving. Developed VHDL testbenches and validated timing, state transitions, signature capture, and real-time display output on a Xilinx FPGA.',
-    context: 'Signature analysis represents a stream of digital data with a compact signature. The waveform illustration is a conceptual visual, not a captured result from the project.'
+    context: 'Signature analysis represents a stream of digital data with a compact signature.'
   },
   adder: {
     title: 'Pipelined Carry-Select Adder', category: 'Integrated circuits / Cadence', status: 'In progress',
     description: 'A current project designing a pipelined, synchronous 8-bit carry-select adder in Cadence, connecting datapath design with VLSI design methodologies.',
     focus: 'Synchronous arithmetic hardware, pipelining, and integrated circuit design in Cadence.',
-    context: 'Carry-select architectures calculate candidate sums for different carry inputs and select the appropriate result. The illustration is conceptual and does not represent the final schematic or layout.'
-  },
-  beacon: {
-    title: 'Dual-Mode BLE Beacon', category: 'Connected hardware / RF PCB design', status: 'December 2025 · Altium Designer & Embedded C',
-    description: 'Engineered a compact 1.7 × 1.0 inch, four-layer nRF52832 BLE beacon PCB with a 2.4 GHz meandered inverted-F antenna (MIFA) and a CR2032-powered form factor.',
-    focus: 'Applied RF layout constraints including antenna keepout, no-copper regions, and via fencing. Developed Nordic SDK embedded C firmware for dual Finder/Game modes and a BLE advertising state machine, then programmed and debugged the board over SWD/JTAG using a Raspberry Pi Pico as a probe.',
-    context: 'BLE beacons broadcast information that nearby compatible devices can receive. The board illustration is a conceptual visual, not a rendering of the fabricated PCB.'
+    context: 'Carry-select architectures calculate candidate sums for different carry inputs and select the appropriate result.'
   }
 };
 
@@ -47,7 +41,7 @@ filters.forEach(button => button.addEventListener('click', () => {
 
 const dialog = document.getElementById('project-dialog');
 let dialogTrigger;
-document.querySelectorAll('.project-open').forEach(button => button.addEventListener('click', () => {
+document.querySelectorAll('.project-open[data-project]').forEach(button => button.addEventListener('click', () => {
   const project = projectData[button.dataset.project];
   dialogTrigger = button;
   document.getElementById('dialog-title').textContent = project.title;

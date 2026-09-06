@@ -35,6 +35,6 @@ Alternatively, upload the public files through GitHub's web interface, select **
 - Resume: replace `assets/Sean_Kane_Resume.pdf` while retaining the filename.
 - Icon: `assets/favicon.svg`.
 
-Project images are hand-built conceptual CSS/SVG illustrations, not screenshots of fabricated hardware, schematics, or test results. Current projects are labeled in progress. Add actual project photographs, simulation results, reports, repository links, and measured outcomes as they become available. No performance metrics or completion dates are inferred.
+The BLE project page is in `projects/ble-beacon.html`, with its styles and image-viewer logic beside it. The zoomable schematic is rendered from the original PDF, and the original PDF and STEP board model are included in `assets/ble-beacon/`. The homepage currently uses this actual schematic as the project preview. The five supplied screenshots still need local image files before the board-photo gallery can be included; the prepared gallery template remains in the ignored local workspace. The other three projects have text cards pending their project images. Current projects are labeled in progress. No performance metrics or completion dates are inferred.
 
 The background animation respects the operating system's reduced-motion setting, can be paused using the footer control, and pauses when the page is not visible. Navigation, filters, and dialogs support keyboard interaction. The contact button opens an email application; the site has no backend, tracking, or contact form.

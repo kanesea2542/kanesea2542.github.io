@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#111310">
+  <meta name="description" content="Sean Kane: dual-mode BLE beacon hardware design, interactive circuit schematic, and downloadable STEP model.">
+  <title>Dual-Mode BLE Beacon — Sean Kane</title>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../styles.css?v=ble-preview-1">
+  <link rel="stylesheet" href="ble-beacon.css">
+  <script src="ble-beacon.js" defer></script>
+</head>
+<body class="project-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header"><a class="wordmark" href="../index.html" aria-label="Sean Kane, home">sk<span>.</span></a><a class="back-link" href="../index.html#work">← All projects</a><a class="header-contact" href="mailto:sean.ryan.kane@gmail.com">Let’s connect <span aria-hidden="true">↗</span></a></header>
+  <main id="main" class="section-shell">
+    <section class="project-intro" aria-labelledby="project-title">
+      <p class="eyebrow section-index">PCB design / Embedded systems / December 2025</p>
+      <h1 id="project-title">Dual-Mode BLE Beacon</h1>
+      <p>A compact, battery-powered Bluetooth Low Energy board with Finder and Game modes. Designed in Altium Designer around the Nordic nRF52832, with an integrated 2.4 GHz antenna and embedded C firmware.</p>
+      <dl class="project-facts"><div><dt>Microcontroller</dt><dd>Nordic nRF52832</dd></div><div><dt>Board</dt><dd>4 layers · 1.7 × 1.0 in</dd></div><div><dt>Power</dt><dd>CR2032 coin cell</dd></div><div><dt>Design tools</dt><dd>Altium Designer · Nordic SDK</dd></div></dl>
+      <nav class="project-nav" aria-label="Project sections"><a href="#board">Project overview</a><a href="#schematic">Schematic</a><a href="#files">Design files</a></nav>
+    </section>
+    <section id="board" class="project-section" aria-labelledby="board-title">
+      <div class="project-section-heading"><p class="eyebrow section-index">01 / Project overview</p><h2 id="board-title">Hardware and firmware design</h2><p>A four-layer RF board and embedded firmware for a dual-mode Bluetooth Low Energy beacon.</p></div>
+      <div class="board-overview overview-text">
+        <div class="design-notes"><h3>Hardware and firmware</h3><p>The four-layer PCB combines a 2.4 GHz meandered inverted-F antenna (MIFA) with a coin-cell-powered nRF52832 design. RF layout work includes antenna keepout, no-copper regions, and via fencing.</p><p>Embedded C firmware using the Nordic SDK implements Finder and Game modes and a BLE advertising state machine. Programming and debugging used SWD/JTAG with a Raspberry Pi Pico as a probe.</p><h3>Design documentation</h3><p>Explore the circuit schematic below, or download the original PDF and STEP board model.</p></div>
+      </div>
+    </section>
+    <section id="schematic" class="project-section" aria-labelledby="schematic-title">
+      <div class="project-section-heading"><p class="eyebrow section-index">02 / Schematic</p><h2 id="schematic-title">Explore the circuit</h2><p>Zoom in to read component values and connections. Drag to pan, or use the viewer’s scrollbars and keyboard arrow keys.</p></div>
+      <div class="schematic-viewer">
+        <div class="viewer-toolbar"><div class="zoom-controls" role="group" aria-label="Schematic zoom"><button type="button" id="schematic-out" aria-label="Zoom out of schematic">−</button><output id="schematic-zoom" aria-live="polite">100%</output><button type="button" id="schematic-in" aria-label="Zoom into schematic">+</button><button type="button" id="schematic-fit">Fit</button></div><a href="../assets/ble-beacon/schematic.pdf" target="_blank" rel="noopener">Open PDF ↗</a></div>
+        <div id="schematic-viewport" class="pan-viewport" tabindex="0" role="region" aria-label="Zoomable BLE beacon schematic"><div class="pan-stage"><img id="schematic-image" src="../assets/ble-beacon/schematic.png" alt="Complete BLE beacon electrical schematic. The PDF version is available above." loading="lazy" draggable="false"></div></div>
+      </div>
+    </section>
+    <section id="files" class="project-section project-files" aria-labelledby="files-title"><div class="project-section-heading"><p class="eyebrow section-index">03 / Design files</p><h2 id="files-title">Schematic and 3D model</h2><p>Download the original schematic or open the STEP board model in a compatible CAD viewer.</p></div><div class="file-links"><a href="../assets/ble-beacon/schematic.pdf" download class="button button-secondary">Download schematic <span>PDF ↓</span></a><a href="../assets/ble-beacon/board.step" download class="button button-secondary">Download 3D board model <span>STEP ↓</span></a></div></section>
+  </main>
+  <footer class="site-footer section-shell"><a class="wordmark" href="../index.html" aria-label="Sean Kane, home">sk<span>.</span></a><span>Sean Kane</span><a class="footer-end" href="../index.html#work">← Back to projects</a></footer>
+  <dialog id="image-dialog" class="image-dialog" aria-labelledby="image-caption"><div class="viewer-toolbar"><h2 id="image-caption"></h2><div class="zoom-controls" role="group" aria-label="Image zoom"><button type="button" id="image-out" aria-label="Zoom out of image">−</button><output id="image-zoom" aria-live="polite">100%</output><button type="button" id="image-in" aria-label="Zoom into image">+</button><button type="button" id="image-fit">Fit</button><button type="button" class="image-close" aria-label="Close image viewer">×</button></div></div><div id="image-viewport" class="pan-viewport" tabindex="0" role="region" aria-label="Zoomable project image"><div class="pan-stage"><img id="detail-image" alt="" draggable="false"></div></div><a id="original-image" target="_blank" rel="noopener">Open original image ↗</a></dialog>
+</body>
+</html>
