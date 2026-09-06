@@ -4,8 +4,8 @@ import { resolve, extname, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const root = fileURLToPath(new URL('.', import.meta.url));
-const types = { '.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.svg': 'image/svg+xml', '.pdf': 'application/pdf' };
-const allowed = new Set(['index.html', 'styles.css', 'script.js', 'assets/favicon.svg', 'assets/Sean_Kane_Resume.pdf']);
+const types = { '.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.svg': 'image/svg+xml', '.pdf': 'application/pdf', '.jpg': 'image/jpeg' };
+const allowed = new Set(['index.html', 'styles.css', 'script.js', 'assets/favicon.svg', 'assets/Sean_Kane_Resume.pdf', 'assets/sean-kane.jpg']);
 const server = http.createServer(async (request, response) => {
   try {
     const pathname = decodeURIComponent(new URL(request.url, 'http://localhost').pathname);
@@ -22,4 +22,5 @@ const server = http.createServer(async (request, response) => {
     response.writeHead(404).end('Not found');
   }
 });
-server.listen(4173, '127.0.0.1', () => console.log('Portfolio preview: http://localhost:4173'));
+const port = Number(process.env.PORT) || 4173;
+server.listen(port, '127.0.0.1', () => console.log(`Portfolio preview: http://localhost:${port}`));
