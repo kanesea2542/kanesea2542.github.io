@@ -80,7 +80,7 @@ function resizeCanvas() {
   points = Array.from({ length: Math.min(42, Math.floor(width * height / 27000)) }, () => ({
     x: Math.random() * width, y: Math.random() * height,
     radius: Math.random() * .8 + .4, speed: Math.random() * 4 + 2,
-    alpha: Math.random() * .22 + .1
+    alpha: Math.random() * .24 + .14
   }));
   paint(0);
 }
