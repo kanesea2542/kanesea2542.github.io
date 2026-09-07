@@ -71,6 +71,7 @@ function createImageViewer(prefix, imageId) {
 
 if (document.getElementById('schematic-viewport')) createImageViewer('schematic', 'schematic-image');
 if (document.getElementById('diagram-viewport')) createImageViewer('diagram', 'diagram-image');
+if (document.getElementById('waveform-viewport')) createImageViewer('waveform', 'waveform-image');
 if (document.getElementById('image-dialog')) {
 const enlargedViewer = createImageViewer('image', 'detail-image');
 const dialog = document.getElementById('image-dialog');

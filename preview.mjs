@@ -9,6 +9,7 @@ const allowed = new Set(['index.html', 'styles.css', 'script.js', 'assets/favico
 ['projects/board-scene.js','projects/board-viewer.js','assets/ble-beacon/board-model.json','assets/ble-beacon/board-model.bin','assets/vendor/three/three.module.min.js','assets/vendor/three/OrbitControls.js','assets/vendor/three/LICENSE.txt'].forEach(path=>allowed.add(path));
 types['.json']='application/json';types['.bin']='application/octet-stream';types['.txt']='text/plain';
 ['assets/ble-beacon/altium-overview.png','assets/hp5004a/system-diagram.png','assets/hp5004a/wave.asdb','projects/hp5004a.html'].forEach(path=>allowed.add(path));
+allowed.add('assets/hp5004a/waveform.png');
 const server = http.createServer(async (request, response) => {
   try {
     const pathname = decodeURIComponent(new URL(request.url, 'http://localhost').pathname);

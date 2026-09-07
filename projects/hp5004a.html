@@ -9,7 +9,7 @@
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../styles.css?v=20260907-evidence">
   <link rel="stylesheet" href="ble-beacon.css?v=20260907">
-  <script src="ble-beacon.js?v=20260907" defer></script>
+  <script src="ble-beacon.js?v=20260907-waveform" defer></script>
 </head>
 <body class="project-page">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -20,7 +20,7 @@
       <h1 id="project-title">HP 5004A Signature Analyzer</h1>
       <p>A VHDL implementation of the HP 5004A signature analyzer. A 16-bit linear-feedback shift register compacts serial input data into repeatable hexadecimal signatures for hardware fault analysis.</p>
       <dl class="project-facts"><div><dt>Language</dt><dd>VHDL</dd></div><div><dt>Signature</dt><dd>16-bit LFSR</dd></div><div><dt>Platform</dt><dd>Xilinx FPGA</dd></div><div><dt>Validation</dt><dd>Simulation &amp; hardware</dd></div></dl>
-      <nav class="project-nav" aria-label="Project sections"><a href="#system">System diagram</a><a href="#implementation">RTL implementation</a><a href="#simulation">Simulation data</a></nav>
+      <nav class="project-nav" aria-label="Project sections"><a href="#system">System diagram</a><a href="#implementation">RTL implementation</a><a href="#simulation">Simulation waveform</a></nav>
     </section>
     <section id="system" class="project-section" aria-labelledby="system-title">
       <div class="project-section-heading"><p class="eyebrow section-index">01 / System architecture</p><h2 id="system-title">Code-to-graphics view</h2><p>The full system diagram shows the connections between the sampling logic, signature generation, output buffer, and display driver. Zoom to inspect the signals, then drag or scroll to pan.</p></div>
@@ -37,8 +37,12 @@
       </div>
     </section>
     <section id="simulation" class="project-section project-files" aria-labelledby="simulation-title">
-      <div class="project-section-heading"><p class="eyebrow section-index">03 / Simulation data</p><h2 id="simulation-title">Recorded simulation</h2><p>The original waveform database is available in Aldec ASDB format. Viewing this file requires compatible Aldec software.</p></div>
-      <div class="file-links"><a href="../assets/hp5004a/wave.asdb" download class="button button-secondary">Original simulation data <span>ASDB ↓</span></a></div>
+      <div class="project-section-heading"><p class="eyebrow section-index">03 / Simulation waveform</p><h2 id="simulation-title">Recorded simulation</h2><p>The waveform export shows the reset, clock, start/stop, data, and display signals over time. Zoom to read individual transitions, then drag or scroll to inspect the image.</p></div>
+      <div class="schematic-viewer">
+        <div class="viewer-toolbar"><div class="zoom-controls" role="group" aria-label="Waveform image zoom"><button type="button" id="waveform-out" aria-label="Zoom out of waveform">−</button><output id="waveform-zoom" aria-live="polite">100%</output><button type="button" id="waveform-in" aria-label="Zoom into waveform">+</button><button type="button" id="waveform-fit">Fit</button></div><a href="../assets/hp5004a/waveform.png" target="_blank" rel="noopener">Open full image ↗</a></div>
+        <div id="waveform-viewport" class="pan-viewport" tabindex="0" role="region" aria-label="Zoomable HP 5004A simulation waveform"><div class="pan-stage"><img id="waveform-image" src="../assets/hp5004a/waveform.png" alt="Simulation waveform with a microsecond time axis and rows for rst_bar, clk, start, starte, stop, stope, clock, clocke, data, segs, digs, and end_sim. The segs bus changes from 3F to 77." width="800" height="600" loading="lazy" draggable="false"></div></div>
+      </div>
+      <p class="model-keyboard">Static waveform export. <a href="../assets/hp5004a/wave.asdb" download>Download the original ASDB simulation data</a> for use with compatible Aldec software.</p>
     </section>
   </main>
   <footer class="site-footer section-shell"><a class="wordmark" href="../index.html" aria-label="Sean Kane, home">sk<span>.</span></a><span>Sean Kane</span><a class="footer-end" href="../index.html#work">← Back to projects</a></footer>
