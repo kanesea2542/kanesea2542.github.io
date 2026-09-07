@@ -7,12 +7,6 @@ const projectData = {
     focus: 'Developing modular RTL components and verifying them with SystemVerilog testbenches and randomized simulation in Siemens QuestaSim. Synthesis work uses Synopsys Design Compiler targeting the Nangate 45 nm standard-cell library to evaluate the hardware implementation.',
     context: '2D convolution applies a kernel across input data to generate an output.'
   },
-  signature: {
-    title: 'HP 5004A Signature Analyzer', category: 'Digital systems / VHDL', status: 'Completed May 2026 · Validated on a Xilinx FPGA',
-    description: 'Designed a VHDL-based HP 5004A digital signature analyzer using a 16-bit linear-feedback shift register (LFSR) to compact serial input data into repeatable hexadecimal signatures for hardware fault analysis.',
-    focus: 'Implemented modular RTL for start/stop gate-generation state machines, edge-select sampling, LFSR control, output buffering, and multiplexed 7-segment display driving. Developed VHDL testbenches and validated timing, state transitions, signature capture, and real-time display output on a Xilinx FPGA.',
-    context: 'Signature analysis represents a stream of digital data with a compact signature.'
-  },
   adder: {
     title: 'Pipelined Carry-Select Adder', category: 'Integrated circuits / Cadence', status: 'In progress',
     description: 'A current project designing a pipelined, synchronous 8-bit carry-select adder in Cadence, connecting datapath design with VLSI design methodologies.',

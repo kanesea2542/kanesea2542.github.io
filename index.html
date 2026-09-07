@@ -12,8 +12,8 @@
   <link rel="canonical" href="https://kanesea2542.github.io/">
   <title>Sean Kane — Digital Hardware Design & Verification</title>
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-  <link rel="stylesheet" href="styles.css?v=20260906-ble">
-  <script src="script.js?v=20260906-ble" defer></script>
+  <link rel="stylesheet" href="styles.css?v=20260907-evidence">
+  <script src="script.js?v=20260907-evidence" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -62,15 +62,17 @@
       <p id="filter-status" class="sr-only" aria-live="polite"></p>
       <div class="project-grid">
         <article class="project-card beacon-project" data-category="pcb">
-          <a class="beacon-project-image" href="projects/ble-beacon.html" aria-label="Explore the Dual-Mode BLE Beacon project"><img src="assets/ble-beacon/board-overview.png" alt="Top-down rendering of the populated BLE beacon board from its STEP model" width="600" height="1100" loading="lazy"></a>
+          <a class="beacon-project-image" href="projects/ble-beacon.html" aria-label="Explore the Dual-Mode BLE Beacon project"><img src="assets/ble-beacon/altium-overview.png" alt="Altium Designer top view of the populated BLE beacon board" width="355" height="637" loading="lazy"></a>
           <div class="project-body"><div class="project-meta">PCB DESIGN / EMBEDDED SYSTEMS</div><div class="project-title-row"><h3><a href="projects/ble-beacon.html">Dual-Mode BLE Beacon</a></h3></div><p>A compact four-layer nRF52832 board with a 2.4 GHz antenna and embedded C firmware for Finder and Game modes.</p><div class="tags"><span>Altium Designer</span><span>RF PCB</span><span>Embedded C</span></div><a class="project-read" href="projects/ble-beacon.html">Explore board in 3D <span aria-hidden="true">↗</span></a></div>
+        </article>
+        <article class="project-card signature-project" data-category="rtl">
+          <a class="signature-project-image" href="projects/hp5004a.html" aria-label="Explore the HP 5004A Signature Analyzer project"><img src="assets/hp5004a/system-diagram.png" alt="HP 5004A RTL block diagram showing edge selection, gate generation, LFSR, output buffer, and display driver" width="982" height="556" loading="lazy"></a>
+          <div class="project-body"><div class="project-meta">FPGA DESIGN</div><div class="project-title-row"><h3><a href="projects/hp5004a.html">HP 5004A Signature Analyzer</a></h3></div><p>A 16-bit LFSR signature analyzer with modular control logic and real-time display output, validated on a Xilinx FPGA.</p><div class="tags"><span>VHDL</span><span>Xilinx FPGA</span><span>Simulation</span></div><a class="project-read" href="projects/hp5004a.html">Explore the system <span aria-hidden="true">↗</span></a></div>
         </article>
         <article class="project-card" data-category="rtl">
           <div class="project-body"><div class="project-meta">RTL DESIGN <span>In progress</span></div><div class="project-title-row"><h3>2D Convolution Accelerator</h3><button class="project-open" data-project="convolution" aria-label="Read about the 2D Convolution Accelerator">↗</button></div><p>Synthesizable SystemVerilog for 2D convolution, with randomized verification in QuestaSim and synthesis targeting Nangate 45 nm.</p><div class="tags"><span>SystemVerilog</span><span>QuestaSim</span><span>Design Compiler</span></div></div>
         </article>
-        <article class="project-card" data-category="rtl">
-          <div class="project-body"><div class="project-meta">FPGA DESIGN</div><div class="project-title-row"><h3>HP 5004A Signature Analyzer</h3><button class="project-open" data-project="signature" aria-label="Read about the HP 5004A Signature Analyzer">↗</button></div><p>A 16-bit LFSR signature analyzer with modular control logic and real-time display output, validated on a Xilinx FPGA.</p><div class="tags"><span>VHDL</span><span>Xilinx FPGA</span><span>Simulation</span></div></div>
-        </article>
+
         <article class="project-card" data-category="vlsi">
           <div class="project-body"><div class="project-meta">VLSI DESIGN <span>In progress</span></div><div class="project-title-row"><h3>Pipelined Carry-Select Adder</h3><button class="project-open" data-project="adder" aria-label="Read about the Pipelined Carry-Select Adder">↗</button></div><p>An 8-bit synchronous carry-select adder in Cadence, connecting datapath architecture with VLSI design.</p><div class="tags"><span>Cadence</span><span>VLSI</span><span>CMOS</span></div></div>
         </article>

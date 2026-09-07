@@ -69,7 +69,9 @@ function createImageViewer(prefix, imageId) {
   return {fit};
 }
 
-createImageViewer('schematic', 'schematic-image');
+if (document.getElementById('schematic-viewport')) createImageViewer('schematic', 'schematic-image');
+if (document.getElementById('diagram-viewport')) createImageViewer('diagram', 'diagram-image');
+if (document.getElementById('image-dialog')) {
 const enlargedViewer = createImageViewer('image', 'detail-image');
 const dialog = document.getElementById('image-dialog');
 let opener;
@@ -89,3 +91,4 @@ dialog.addEventListener('click', event => {
   const rect = dialog.getBoundingClientRect();
   if (event.target === dialog && (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom)) dialog.close();
 });
+}
